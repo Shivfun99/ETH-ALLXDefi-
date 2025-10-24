@@ -1,0 +1,180 @@
+/* Global reset + Background styling */
+html, body, #root {
+  min-height: 100vh;
+  min-width: 100vw;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: linear-gradient(120deg, #1e1b2e 0%, #352647 100%);
+  color: #f5f7fa;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Root container for app */
+.omni-root {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+/* Center content vertically */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 78vh;
+}
+
+/* Card box for views and forms */
+.form-box {
+  background: rgba(38, 40, 71, 0.96);
+  border-radius: 18px;
+  box-shadow: 0 12px 32px rgba(86, 70, 160, 0.25),
+              0 4px 18px rgba(80, 48, 180, 0.15);
+  padding: 40px 36px;
+  margin: 24px auto;
+  width: 100%;
+  max-width: 480px;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fbedff;
+}
+
+/* Center form elements and spacing */
+.form-box form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+
+/* Inputs and selects */
+input, select {
+  background: rgba(255,255,255,0.09);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.08rem;
+  padding: 12px 14px;
+  outline: none;
+  color: #ffffff;
+  margin: 10px 0;
+  width: 90%;
+  max-width: 340px;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 8px 0 #3ad3e922;
+  text-align: center;
+}
+
+input:focus, select:focus {
+  box-shadow: 0 0 0 2px #957ae1aa, 0 0 0 5px #ad57ec44;
+  background: rgba(255,255,255,0.13);
+}
+
+/* Buttons */
+button {
+  padding: 12px 32px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #8aa2ff 10%, #9d6dfa 100%);
+  color: #131217;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  margin-top: 16px;
+  cursor: pointer;
+  box-shadow: 0 5px 16px rgba(100,80,255,.25);
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  background: linear-gradient(100deg, #9563f2 10%, #89e1ef 100%);
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(160,120,255,.35);
+}
+
+/* Code display block */
+.code-block, pre.code-block {
+  background: #181c28 !important;
+  color: #e5e9ff !important;
+  font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
+  font-size: 1rem;
+  padding: 18px;
+  border-radius: 12px;
+  margin: 18px 0;
+  border: 1.4px solid #504c6f;
+  box-shadow: 0 2px 16px 0 #3ad3e928;
+  white-space: pre-wrap;
+  width: 95%;
+  max-width: 100%;
+  overflow-x: auto;
+  text-align: left;
+}
+
+/* Scrollbar tweaks for code block */
+.code-block::-webkit-scrollbar {
+  background: #292d46;
+  height: 8px;
+}
+.code-block::-webkit-scrollbar-thumb {
+  background: #595c7a;
+  border-radius: 4px;
+}
+
+/* Text hierarchy and better readability */
+h1, h2, h3, h4 {
+  text-align: center;
+  margin: 10px 0;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #f2efff;
+}
+
+p, label, div {
+  text-align: center;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  color: #c5cbff;
+  font-weight: 500;
+  font-size: 1.02rem;
+}
+
+/* Smooth fade for items appearance */
+.form-box, input, button, .code-block {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 700px) {
+  .form-box {
+    padding: 24px 5vw;
+    width: 94vw;
+    max-width: 96vw;
+  }
+  input, select, button, .code-block {
+    width: 92vw;
+    font-size: 0.97rem;
+  }
+  h1, h2, h3 {
+    font-size: 1.3rem;
+  }
+}

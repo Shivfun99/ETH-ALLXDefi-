@@ -1,0 +1,14 @@
+{
+  "chain": "ethereum",
+  "wallets": [
+    {
+      "address": "0x06d0e2bF3C8dB002BF14c85A08Debab70e21f78F",
+      "balance": "0"
+    }
+  ],
+  "totals": {
+    "nativeWei": "0",
+    "txCount": 10,
+    "txValuesSum": 1000000000000000
+  }
+}
